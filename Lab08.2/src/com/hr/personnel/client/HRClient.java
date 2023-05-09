@@ -26,10 +26,10 @@ class HRClient {
         System.out.println(dept);
 
         // add Employees to it
-        dept.addEmployee(new Employee("Jason", LocalDate.of(1990, 8, 24)));
-        dept.addEmployee(new Employee("Julie", LocalDate.of(2000, 2, 2)));
-        dept.addEmployee(new SalariedEmployee("Adrienne", LocalDate.of(2005,9,29), 2600.0));
-        dept.addEmployee(new HourlyEmployee("Orion", LocalDate.of(2013,2,8), 10.0, 20.0));
+        dept.addEmployee(new SalariedEmployee("Jason",      LocalDate.of(1990, 8, 24), 1750.0));
+        dept.addEmployee(new HourlyEmployee("Julie",        LocalDate.of(2000, 2, 2),45.0, 20.0));
+        dept.addEmployee(new SalariedEmployee("Adrienne",   LocalDate.of(2005,9,29), 2600.0));
+        dept.addEmployee(new HourlyEmployee("Orion",        LocalDate.of(2013,2,8), 10.0, 20.0));
 
         // list its Employees
         System.out.println("\nList employees:");
@@ -45,9 +45,10 @@ class HRClient {
 
         // print personal greeting
         String greeting = "\n" +
-                "(\\_/) \n" +
-                "(O.O) \n" +
-                "(m m)o \n";
+                "     (\\_/) \n" +
+                "     (0.0) \n" +
+                "     (m m)o \n" +
+                "MichaelWelch Inc.";
         System.out.println(greeting);
     }
 }

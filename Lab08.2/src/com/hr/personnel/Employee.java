@@ -21,7 +21,7 @@ import java.time.LocalDate;
  *   void work()        simulates work by printing a message to show it was called.
  *   String toString()  self-explanatory.
  */
-public class Employee {
+public abstract class Employee {
     // fields
     private String name;
     private LocalDate hireDate;
@@ -40,11 +40,13 @@ public class Employee {
         System.out.println(getName() + " working hard since " + getHireDate());
     }
 
+    /*
+     * We declare THAT "all employees get paid," BUT we can't implement it here.
+     * We simply have no financial data to come up with the dollar figure.
+     */
     // Department cannot access pay() in HourlyEmployee and SalariedEmployee without putting a "button" in Employee
     // Department can only see and talk to Employee-Employee then talks down to Hourly and Salaried Classes
-    public void pay() {
-        System.out.println(getName() + " is paid....somehow...");
-    }
+    public abstract void pay();
 
     // accessor methods
     public String getName() {
