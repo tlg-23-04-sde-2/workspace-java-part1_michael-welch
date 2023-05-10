@@ -1,6 +1,6 @@
 package edu.teacher;
 
-class TrainingCompany {
+class TrainingCompany implements Teacher {
     // instance variables
     private String name;
     private String location;
@@ -24,9 +24,10 @@ class TrainingCompany {
         }
     }
 
+    @Override
     public void educatorsTeach(){
         for (int i = 0; i < currentIndex; i++){         // start at 0 array slot and call items until at currentIndex
-            educators[i].teach();           // print toString() for each item called
+            educators[i].educatorsTeach();           // print toString() for each item called
         }
     }
 

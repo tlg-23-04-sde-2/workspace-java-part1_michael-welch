@@ -1,6 +1,6 @@
 package edu.teacher;
 
-class Trainer {
+class Trainer implements Teacher {
     // static methods, shared by all
 
     // instance variables or fields
@@ -18,7 +18,8 @@ class Trainer {
     }
 
     // business methods
-    public void teach() {
+    @Override
+    public void educatorsTeach() {
         System.out.println(" trains a room full of SDE students");
     }
 
