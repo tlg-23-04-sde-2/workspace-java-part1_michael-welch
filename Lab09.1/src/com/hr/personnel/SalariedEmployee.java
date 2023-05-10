@@ -34,6 +34,11 @@ public class SalariedEmployee extends Employee {
         System.out.println(getName() + " paid taxes of " + taxes);
     }
 
+    @Override
+    public double getStandardDeduction() {
+        return 10_000.0;
+    }
+
     public void takeVacation() {
         System.out.println(getName() + " is on vacation");
     }
